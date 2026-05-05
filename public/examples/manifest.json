@@ -1,0 +1,77 @@
+[
+  {
+    "src": "/examples/astronaut-panda.png",
+    "prompt": "A red panda astronaut floating above a neon city at dusk, glowing helmet visor reflecting magenta lights, photorealistic, cinematic.",
+    "style": "fantasy"
+  },
+  {
+    "src": "/examples/samurai-cyber.png",
+    "prompt": "Lone samurai standing in a rainy neon Tokyo alleyway, cyan and pink reflections on wet pavement, holographic billboards, cinematic anamorphic shot.",
+    "style": "cyberpunk"
+  },
+  {
+    "src": "/examples/dragon-ice.png",
+    "prompt": "Majestic ice dragon perched on a frozen mountain peak, bioluminescent blue scales, swirling aurora behind, painterly fantasy art.",
+    "style": "fantasy"
+  },
+  {
+    "src": "/examples/retro-car.png",
+    "prompt": "Sleek 1980s sports car drifting through pink desert at sunset, motion blur, lens flare, Miami vice vibes, cinematic photography.",
+    "style": "cinematic"
+  },
+  {
+    "src": "/examples/mecha-portrait.png",
+    "prompt": "Close-up cinematic shot of a mech pilot's face, half-illuminated by HUD reflections, beads of sweat, sharp focus, sci-fi epic.",
+    "style": "scifi"
+  },
+  {
+    "src": "/examples/anime-witch.png",
+    "prompt": "Young anime witch with violet hair brewing a glowing potion, cozy cottage interior, candlelight, Studio Ghibli inspired warm illustration.",
+    "style": "anime"
+  },
+  {
+    "src": "/examples/underwater-temple.png",
+    "prompt": "Ancient submerged temple with shafts of golden sunlight piercing teal water, schools of bioluminescent fish, mysterious atmosphere, painterly.",
+    "style": "fantasy"
+  },
+  {
+    "src": "/examples/abstract-flow.png",
+    "prompt": "Liquid metallic chrome shapes flowing through space, iridescent rainbow reflections on black void, ultra-glossy, abstract 3D render.",
+    "style": "abstract"
+  },
+  {
+    "src": "/examples/wolf-spirit.png",
+    "prompt": "Spectral wolf made of swirling violet stardust howling at a blood-red moon, dark forest silhouette, dramatic painterly fantasy.",
+    "style": "fantasy"
+  },
+  {
+    "src": "/examples/neon-skater.png",
+    "prompt": "Skateboarder mid-trick in a neon-lit underpass, motion blur, magenta and cyan graffiti, gritty cinematic urban photography.",
+    "style": "cyberpunk"
+  },
+  {
+    "src": "/examples/luxury-watch.png",
+    "prompt": "Premium black ceramic luxury watch on a velvet surface, dramatic studio lighting, subtle reflections, commercial product photography.",
+    "style": "product"
+  },
+  {
+    "src": "/examples/fox-shrine.png",
+    "prompt": "White nine-tailed fox spirit beside a moonlit shrine, glowing pink lanterns, cherry blossom petals drifting, anime illustration.",
+    "style": "anime"
+  },
+  {
+    "src": "/examples/warrior-portrait.png",
+    "prompt": "Editorial portrait of a fierce warrior woman with tribal face paint, wind blowing dark hair, golden hour lighting, 85mm lens, sharp focus.",
+    "style": "portrait"
+  },
+  {
+    "src": "/examples/sky-whale.png",
+    "prompt": "Enormous whale floating through pink and lavender clouds at sunset, tiny hot air balloons drifting beneath, dreamy painterly fantasy.",
+    "style": "fantasy"
+  },
+  {
+    "src": "/examples/nebula-explorer.png",
+    "prompt": "Lone astronaut silhouette gazing into a swirling psychedelic nebula of magenta, cyan, and gold, vast cosmic scale, surreal art.",
+    "style": "abstract"
+  }
+]
