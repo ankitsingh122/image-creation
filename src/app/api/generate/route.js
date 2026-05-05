@@ -34,16 +34,35 @@ export async function POST(request) {
     return Response.json({ error: "Invalid JSON body" }, { status: 400 });
   }
 
-  const { prompt, style = "none", referenceImages = [], context = "" } = body;
+  const {
+    prompt,
+    style = "none",
+    referenceImages = [],
+    context = "",
+    mode = "create",
+    sourceImage = null,
+  } = body;
 
   if (!prompt || typeof prompt !== "string" || prompt.trim().length === 0) {
     return Response.json({ error: "Prompt is required" }, { status: 400 });
   }
 
+  if (mode === "edit" && (!sourceImage?.data || !sourceImage?.mimeType)) {
+    return Response.json(
+      { error: "Edit mode requires a source image." },
+      { status: 400 },
+    );
+  }
+
   const styleSuffix = STYLE_PRESETS[style] ?? "";
+  const instruction =
+    mode === "edit"
+      ? `Edit the provided image. ${prompt.trim()}\nKeep the overall composition and identity of the original; apply only the requested changes.`
+      : `Create an image: ${prompt.trim()}`;
+
   const finalPrompt = [
     context && `Context: ${context}`,
-    `Create an image: ${prompt.trim()}`,
+    instruction,
     styleSuffix && `Style: ${styleSuffix}`,
     "Generate a single high-quality image.",
   ]
@@ -51,6 +70,16 @@ export async function POST(request) {
     .join("\n\n");
 
   const parts = [{ text: finalPrompt }];
+
+  if (mode === "edit") {
+    parts.push({
+      inlineData: {
+        data: sourceImage.data,
+        mimeType: sourceImage.mimeType,
+      },
+    });
+  }
+
   for (const ref of referenceImages) {
     if (ref?.data && ref?.mimeType) {
       parts.push({
