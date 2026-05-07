@@ -1,5 +1,6 @@
 import { Syne, DM_Sans } from "next/font/google";
 import "./globals.css";
+import SessionProvider from "@/components/SessionProvider";
 
 const syne = Syne({
   variable: "--font-syne",
@@ -26,7 +27,7 @@ export default function RootLayout({ children }) {
       className={`${syne.variable} ${dmSans.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-[#0a0812] text-white overflow-x-hidden">
-        {children}
+        <SessionProvider>{children}</SessionProvider>
       </body>
     </html>
   );

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import TryItButton from "@/components/TryItButton";
 
 const cards = [
   {
@@ -191,22 +192,17 @@ export default function Home() {
             </span>
           </div>
           <div className="hidden md:flex items-center gap-10 text-sm text-white/70">
-            <a href="#pricing" className="hover:text-white transition-colors">
+            <Link href="/pricing" className="hover:text-white transition-colors">
               Pricing
-            </a>
-            <a href="#discord" className="hover:text-white transition-colors">
-              Discord
-            </a>
-            <a href="#docs" className="hover:text-white transition-colors">
+            </Link>
+            <Link href="/examples" className="hover:text-white transition-colors">
+              Gallery
+            </Link>
+            <Link href="/docs" className="hover:text-white transition-colors">
               Docs
-            </a>
+            </Link>
           </div>
-          <Link
-            href="/generate"
-            className="relative px-5 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-pink to-violet hover:opacity-90 transition-opacity"
-          >
-            Try It
-          </Link>
+          <TryItButton className="relative px-5 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-pink to-violet hover:opacity-90 transition-opacity cursor-pointer" />
         </nav>
       </header>
 
@@ -219,15 +215,14 @@ export default function Home() {
           images with AI.
         </p>
         <div className="mt-5 flex flex-col sm:flex-row gap-3 items-center justify-center">
-          <Link
-            href="/generate"
-            className="animate-glow-pulse px-6 py-2.5 rounded-full font-semibold text-sm bg-gradient-to-r from-pink to-violet hover:opacity-95 transition-all"
+          <TryItButton
+            className="animate-glow-pulse px-6 py-2.5 rounded-full font-semibold text-sm bg-gradient-to-r from-pink to-violet hover:opacity-95 transition-all cursor-pointer"
           >
             Generate Image
-          </Link>
+          </TryItButton>
           <Link
             href="/examples"
-            className="px-6 py-2.5 rounded-full font-semibold text-sm glass hover:bg-white/[0.08] transition-colors"
+            className="px-6 py-2.5 rounded-full font-semibold text-sm glass hover:bg-white/[0.08] transition-colors cursor-pointer"
           >
             See Examples
           </Link>

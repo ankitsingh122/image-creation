@@ -175,7 +175,7 @@ export default function GeneratePage() {
                 key={m.id}
                 type="button"
                 onClick={() => setMode(m.id)}
-                className={`px-3 py-2 rounded-lg text-xs font-semibold transition-all ${
+                className={`px-3 py-2 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
                   mode === m.id
                     ? "bg-gradient-to-r from-pink to-violet text-white"
                     : "text-white/60 hover:text-white"
@@ -201,7 +201,7 @@ export default function GeneratePage() {
                   <button
                     type="button"
                     onClick={() => setSource(null)}
-                    className="absolute top-2 right-2 text-xs px-2.5 py-1 rounded-full bg-black/70 hover:bg-black/90 transition-colors"
+                    className="absolute top-2 right-2 text-xs px-2.5 py-1 rounded-full bg-black/70 hover:bg-black/90 transition-colors cursor-pointer"
                   >
                     Remove
                   </button>
@@ -228,7 +228,7 @@ export default function GeneratePage() {
                 onClick={onEnhance}
                 disabled={!prompt.trim() || enhancing}
                 title="Expand the prompt with Gemini"
-                className="flex items-center gap-1.5 text-[11px] font-semibold px-2.5 py-1 rounded-full bg-gradient-to-r from-pink/20 to-violet/20 border border-violet/40 hover:from-pink/30 hover:to-violet/30 transition-all disabled:opacity-40 disabled:cursor-not-allowed"
+                className="flex items-center gap-1.5 text-[11px] font-semibold px-2.5 py-1 rounded-full bg-gradient-to-r from-pink/20 to-violet/20 border border-violet/40 hover:from-pink/30 hover:to-violet/30 transition-all cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
               >
                 <span className={enhancing ? "animate-spin" : ""}>✨</span>
                 {enhancing ? "Enhancing…" : "Enhance"}

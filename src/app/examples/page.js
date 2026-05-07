@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
+import TryItButton from "@/components/TryItButton";
 
 export const metadata = {
   title: "Examples — ACraft",
@@ -45,7 +46,7 @@ export default function ExamplesPage() {
           </Link>
           <Link
             href="/generate"
-            className="px-5 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-pink to-violet hover:opacity-90 transition-opacity"
+            className="px-5 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-pink to-violet hover:opacity-90 transition-opacity cursor-pointer"
           >
             Generate
           </Link>
@@ -97,7 +98,7 @@ export default function ExamplesPage() {
                     <a
                       href={r.src}
                       download={`acraft-example-${i + 1}.png`}
-                      className="text-xs px-3 py-1.5 rounded-full bg-white/[0.08] hover:bg-white/[0.16] transition-colors"
+                      className="text-xs px-3 py-1.5 rounded-full bg-white/[0.08] hover:bg-white/[0.16] transition-colors cursor-pointer"
                     >
                       Download
                     </a>
@@ -109,12 +110,9 @@ export default function ExamplesPage() {
         )}
 
         <div className="mt-16 text-center">
-          <Link
-            href="/generate"
-            className="inline-block px-8 py-3.5 rounded-full font-semibold text-sm bg-gradient-to-r from-pink to-violet hover:opacity-95 transition-all"
-          >
+          <TryItButton className="inline-block px-8 py-3.5 rounded-full font-semibold text-sm bg-gradient-to-r from-pink to-violet hover:opacity-95 transition-all cursor-pointer">
             Try it yourself →
-          </Link>
+          </TryItButton>
         </div>
       </main>
     </div>
