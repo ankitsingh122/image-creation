@@ -258,7 +258,7 @@ export default function GeneratePage() {
                   key={s.id}
                   type="button"
                   onClick={() => setStyle(s.id)}
-                  className={`px-2 py-2 rounded-lg text-xs font-medium transition-all ${
+                  className={`px-2 py-2 rounded-lg text-xs font-medium transition-all cursor-pointer ${
                     style === s.id
                       ? "bg-gradient-to-r from-pink to-violet text-white"
                       : "bg-white/[0.04] text-white/70 hover:bg-white/[0.08] border border-white/10"
@@ -315,7 +315,7 @@ export default function GeneratePage() {
           <button
             type="submit"
             disabled={loading || !prompt.trim() || (mode === "edit" && !source)}
-            className="w-full px-6 py-3 rounded-full font-semibold text-sm bg-gradient-to-r from-pink to-violet hover:opacity-95 transition-all disabled:opacity-40 disabled:cursor-not-allowed"
+            className="w-full px-6 py-3 rounded-full font-semibold text-sm bg-gradient-to-r from-pink to-violet hover:opacity-95 transition-all cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
           >
             {loading
               ? mode === "edit"
@@ -399,7 +399,7 @@ export default function GeneratePage() {
                       <a
                         href={r.src}
                         download={`acraft-${i + 1}.png`}
-                        className="text-xs px-3 py-1.5 rounded-full bg-white/[0.08] hover:bg-white/[0.16] transition-colors"
+                        className="text-xs px-3 py-1.5 rounded-full bg-white/[0.08] hover:bg-white/[0.16] transition-colors cursor-pointer"
                       >
                         Download
                       </a>
